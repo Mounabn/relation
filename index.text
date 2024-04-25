@@ -1,0 +1,45 @@
+Entité “Hôtel” :
+ID_Hotel
+Nom_Hotel
+Adresse_Hotel
+Étoiles_Hotel
+ID_Type_Hotel
+relation:
+Many-to-one avec l’entité “Type d’hôtel” 
+One-to-many avec l’entité “Chambre” ,“Employé”
+
+
+
+
+Entité “Type d’hôtel” :
+ID_Type_Hotel 
+Nom_Type_Hotel
+Relations :
+One-to-many avec l’entité “Hôtel” 
+
+
+
+Entité “Chambre” :
+ID_Chambre 
+Numéro_Chambre
+ID_Hotel 
+ID_Catégorie
+Relations :
+Many-to-one avec l’entité “Catégorie” ,“Hôtel”
+
+
+Entité “Catégorie” :
+Attributs :
+ID_Catégorie (clé primaire)
+Nom_Catégorie
+Relations :
+One-to-many avec l’entité “Chambre” 
+
+
+Entité “Employé” :
+ID_Employé (clé primaire)
+Nom_Employé
+Prénom_Employé
+ID_Hotel 
+Relations :
+Many-to-one avec l’entité “Hôtel” 
